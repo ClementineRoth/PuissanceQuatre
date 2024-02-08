@@ -23,8 +23,6 @@ namespace PuissanceQuatre.Model
             this.Start();
         }
 
-
-
         public void Start()
         {
 
@@ -51,9 +49,7 @@ namespace PuissanceQuatre.Model
             }
         }
 
-        
-
-        public int ManageSelection()
+        private int ManageSelection()
         {
             Console.WriteLine($"les choix possible sont entre 1 et {grid.WidthSize}");
             
@@ -97,6 +93,19 @@ namespace PuissanceQuatre.Model
             Console.WriteLine();
         }
 
+        private void DisplayLine()
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.Append("---");
+            for (int i = 0; i < grid.HeightSize; i++)
+            {
+                sb.Append("---");
+            }
+            sb.Append("---");
+            Console.WriteLine(sb.ToString());
+
+        }
+
         private void SetConsoleColor(int color)
         {
             switch (color)
@@ -119,19 +128,7 @@ namespace PuissanceQuatre.Model
             Console.WriteLine("\n") ;
             DisplayTable();
         }
-        private void DisplayLine()
-        {
-            StringBuilder sb = new StringBuilder();
-            sb.Append("---");
-            for (int i = 0; i < grid.HeightSize; i++)
-            {
-                sb.Append("---");
-            }
-            sb.Append("---");
-            Console.WriteLine(sb.ToString());
-            
-        }
-        public void DisplayRules()
+        private void DisplayRules()
         {
             Console.WriteLine("Debut d'une nouvelle partie\n\n");
 
