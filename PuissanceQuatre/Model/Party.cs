@@ -116,7 +116,7 @@ namespace PuissanceQuatre.Model
             SetConsoleColor(player.color);
             Console.Write(player.name);
             SetConsoleColor(0);
-            Console.WriteLine() ;
+            Console.WriteLine("\n") ;
             DisplayTable();
         }
         private void DisplayLine()
